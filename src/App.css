@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+#root,
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	box-sizing: border-box;
+	font-family: 'Bree Serif', serif;
+}
+
+.app {
+	height: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('./images/wisdombaba.jpg');
+	background-size: cover;
+	background-position: center;
+	display: flex;
+}
+.card {
+	background: rgba(85, 94, 110, 0.2);
+	height: 20%;
+	margin: 10% 0 0 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 25px;
+	padding: 2%;
+}
