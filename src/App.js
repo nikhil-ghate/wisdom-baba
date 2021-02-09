@@ -7,12 +7,13 @@ function App() {
 	useEffect(() => {
 		fetchAdvice()
 	}, [advice])
-	const fetchAdvice = () => {
+
+	const fetchAdvice = async () => {
 		axios
 			.get('https://api.adviceslip.com/advice')
+
 			.then((response) => {
 				const { advice } = response.data.slip
-				// console.log(advice)
 				setAdvice(advice)
 			})
 			.catch((err) => {
@@ -23,7 +24,7 @@ function App() {
 		<div className='app'>
 			<div className='card'>
 				<h2 className='heading'>{advice}</h2>
-				<button className='button' onClick={fetchAdvice}>
+				<button className='button' onClick={() => fetchAdvice()}>
 					<span>GIVE ME ADVICE !</span>
 				</button>
 			</div>
